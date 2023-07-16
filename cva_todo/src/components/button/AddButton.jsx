@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 
-export default function AddButton() {
-    return <button type="submit" className='btn btn-primary mb-2'>
+export default function AddButton( ) {
+    return <button type="submit">
         Add task
     </button>
 }

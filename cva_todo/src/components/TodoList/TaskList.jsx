@@ -1,11 +1,13 @@
-export default function TaskList() {
+export default function TaskList({tasks}) {
     return (
-        <>
+        <div>
             <ul>
-                <li>task</li>
-                <li>task</li>
-                <li>task</li>
+                {
+                    tasks.map(task => (
+                        <li>{task.name}</li>
+                    ))
+                }
             </ul>
-        </>
+        </div>
     );
 }

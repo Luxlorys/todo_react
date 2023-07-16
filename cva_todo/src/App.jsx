@@ -5,9 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 function App() {
+  
 
   const tasksList = [
     {
+      id: 1,
       name: "create todo app",
       isDone: false,
     }
@@ -19,7 +21,7 @@ function App() {
   return (
     <div className="container">
       <TaskForm tasks={tasks} setTask={setTask}/>
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} setTasks={setTask} />
     </div>
       
   );

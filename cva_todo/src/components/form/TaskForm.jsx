@@ -10,6 +10,7 @@ export default function TaskForm({tasks, setTask}) {
         e.preventDefault();
 
         const newTask = {
+            id: tasks.length + 1,
             name: taskName,
             isDone: false,
         }
@@ -30,7 +31,7 @@ export default function TaskForm({tasks, setTask}) {
                         onChange={e => setTaskName(e.target.value)}/>
                 </div>
 
-                <button type="submit" className="btn btn-primary">submit</button>
+                <button type="submit" className="btn btn-primary">Add new task</button>
             </form>
         </div>
     );

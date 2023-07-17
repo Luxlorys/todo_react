@@ -1,7 +1,8 @@
 import DeleteButton from "../button/DeleteButton";
 import "./task.css";
 
-export default function Task({ task, onDelete, setTask }) {
+
+export default function Task({ task, onDelete, tasks, setTask }) {
   function handleCheckBox() {
     const updatedTask = {
       ...task,
@@ -14,8 +15,14 @@ export default function Task({ task, onDelete, setTask }) {
     );
   }
 
+  const handleDelete = (taskId) => {
+    setTask(
+      tasks.filter(task =>  task.id !== taskId)
+    );
+  }
+
   return (
-    <div className="form">
+    <div className="task">
       <div className="task-content">
         <input
             className="form-check-input"
@@ -25,7 +32,7 @@ export default function Task({ task, onDelete, setTask }) {
         />
         <label className="form-check-label">{task.isDone ? <del>{task.name}</del> : task.name}</label>
       </div>
-      <DeleteButton onDelete={() => onDelete(task.id)} />
+      <DeleteButton onDelete={() => handleDelete(task.id)} />
     </div>
   );
 }

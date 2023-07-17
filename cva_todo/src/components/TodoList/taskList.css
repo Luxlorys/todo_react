@@ -4,3 +4,7 @@
     align-items: center;
     flex-direction: column-reverse;
 }
+
+.task-list > * {
+    margin-bottom: 10px;
+}

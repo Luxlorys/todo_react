@@ -9,12 +9,17 @@ export default function TaskForm({ tasks, setTask }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (taskName.trim() === "") {
+      // Handle the empty input case
+      alert("Please enter a task name");
+      return;
+    }
+
     const newTask = {
       id: tasks.length + 1,
       name: taskName,
       isDone: false,
     };
-
     setTask([...tasks, newTask]);
     setTaskName("");
   };
@@ -26,7 +31,7 @@ export default function TaskForm({ tasks, setTask }) {
           <input
             type="text"
             value={taskName}
-            className="form-control"
+            className=""
             onChange={(e) => setTaskName(e.target.value)}
           />
         </div>

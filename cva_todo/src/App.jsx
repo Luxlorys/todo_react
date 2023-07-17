@@ -6,20 +6,7 @@ import './index.css';
 
 function App() {
   
-  const tasksList = [
-    {
-      id: 1,
-      name: "create todo app",
-      isDone: false,
-    },
-    {
-      id: 2,
-      name: "create todo app222",
-      isDone: true,
-    }
-  ];
-
-  const [tasks, setTask] = useState(tasksList);
+  const [tasks, setTask] = useState([]);
 
 
   return (

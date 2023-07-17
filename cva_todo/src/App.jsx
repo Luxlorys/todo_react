@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import TaskForm from "./components/form/TaskForm";
 import TaskList from "./components/TodoList/TaskList";
-import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 
 function App() {
   
-
   const tasksList = [
     {
       id: 1,
@@ -24,7 +23,7 @@ function App() {
 
 
   return (
-    <div className="container">
+    <div className="center">
       <TaskForm tasks={tasks} setTask={setTask}/>
       <TaskList tasks={tasks} setTasks={setTask} />
     </div>

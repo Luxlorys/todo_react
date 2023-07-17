@@ -31,7 +31,7 @@ export default function TaskForm({ tasks, setTask }) {
           <input
             type="text"
             value={taskName}
-            className=""
+            className="rounded-input"
             onChange={(e) => setTaskName(e.target.value)}
           />
         </div>

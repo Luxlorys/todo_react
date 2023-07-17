@@ -1,4 +1,5 @@
 import Task from "./Task";
+import './taskList.css';
 
 export default function TaskList({ tasks, setTasks }) {
   const handleDelete = (taskId) => {
@@ -7,11 +8,12 @@ export default function TaskList({ tasks, setTasks }) {
     );
   }
   return (
-    <div>
+    <div className="task-list">
         {tasks.map((task) => (
           <Task 
             task={task}
             onDelete={() => handleDelete(task.id)}
+            setTask={setTasks}
           />
         ))}
     </div>

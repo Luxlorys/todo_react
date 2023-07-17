@@ -2,12 +2,14 @@ import DeleteButton from "../button/DeleteButton";
 import "./task.css";
 
 
-export default function Task({ task, onDelete, tasks, setTask }) {
+export default function Task({ task, tasks, setTask }) {
   function handleCheckBox() {
+
     const updatedTask = {
       ...task,
       isDone: !task.isDone,
     };
+
     setTask((prevTasks) =>
       prevTasks.map((prevTask) =>
         prevTask.id === updatedTask.id ? updatedTask : prevTask
@@ -17,7 +19,7 @@ export default function Task({ task, onDelete, tasks, setTask }) {
 
   const handleDelete = (taskId) => {
     setTask(
-      tasks.filter(task =>  task.id !== taskId)
+      tasks.filter(task => task.id !== taskId)
     );
   }
 

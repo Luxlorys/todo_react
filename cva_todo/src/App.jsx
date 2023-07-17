@@ -6,13 +6,12 @@ import './index.css';
 
 function App() {
   
-  const [tasks, setTask] = useState([]);
-
+  const [tasks, setTasks] = useState([]);
 
   return (
     <div className="center">
-      <TaskForm tasks={tasks} setTask={setTask}/>
-      <TaskList tasks={tasks} setTasks={setTask} />
+      <TaskForm tasks={tasks} setTask={setTasks}/>
+      <TaskList tasks={tasks} setTasks={setTasks} />
     </div>
       
   );

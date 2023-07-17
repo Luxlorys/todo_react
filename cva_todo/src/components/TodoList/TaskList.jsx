@@ -1,5 +1,7 @@
 import Task from "./Task";
 import './taskList.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function TaskList({ tasks, setTasks }) {
   
@@ -10,6 +12,7 @@ export default function TaskList({ tasks, setTasks }) {
       <div className="task-list">
         {tasks.map((task) => (
           <Task 
+            key={task.id}
             task={task}
             tasks={tasks}
             setTask={setTasks}

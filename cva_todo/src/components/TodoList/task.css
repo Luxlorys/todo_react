@@ -1,11 +1,17 @@
 .task {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    width: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .task-content {
+    display: flex;
+    align-items: flex-start;
     margin-right: 100px;
 }
 

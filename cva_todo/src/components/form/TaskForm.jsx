@@ -26,8 +26,8 @@ export default function TaskForm({ tasks, setTask }) {
 
   return (
     <div onSubmit={handleSubmit}>
-      <form className="">
-        <div className="">
+      <form className="task-form">
+        <div className="input-field">
           <input
             type="text"
             value={taskName}

@@ -12,6 +12,11 @@ function App() {
       id: 1,
       name: "create todo app",
       isDone: false,
+    },
+    {
+      id: 2,
+      name: "create todo app222",
+      isDone: true,
     }
   ];
 

@@ -17,11 +17,8 @@ export default function Task({ task, tasks, setTask }) {
     );
   }
 
-  const handleDelete = (taskId) => {
-    setTask(
-      tasks.filter(task => task.id !== taskId)
-    );
-  }
+  const handleDelete = (taskId) => setTask(tasks.filter(task => task.id !== taskId));
+  
 
   return (
     <div className="task">

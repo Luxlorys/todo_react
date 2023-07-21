@@ -9,7 +9,7 @@ export default function TaskForm({ tasks, setTask }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (taskName.trim() === "") {
+    if (taskName === "") {
       // Handle the empty input case
       alert("Please enter a task name");
       return;
@@ -25,17 +25,18 @@ export default function TaskForm({ tasks, setTask }) {
   };
 
   return (
-    <div onSubmit={handleSubmit}>
-      <form className="task-form">
+    <div>
+      <form onSubmit={handleSubmit} className="task-form">
         <div className="input-field">
           <input
             type="text"
             value={taskName}
             className="rounded-input"
+            placeholder="enter your task here"
             onChange={(e) => setTaskName(e.target.value)}
           />
         </div>
-        <AddButton />
+        <AddButton onClick={handleSubmit} />
       </form>
     </div>
   );
